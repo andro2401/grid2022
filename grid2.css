@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    height: 100vh;
+
+    display: grid;
+    grid-template-areas: 
+    'header header header'
+    'nav content sidebar'
+    'nav footer footer';
+
+    grid-template-columns: 1fr 4fr 1fr; /* da dodamo velicine na stranicu jer inace ce se protezati ravnomjerno na visinu od 100vh koju smo stavili u body*/
+    grid-template-rows: 80px 1fr/*mogu stavit i auto uzet ce preostali prostor*/ 40px;
+}
+
+header,
+main,
+nav,
+aside,
+footer{
+    background: steelblue;
+    color: #fff;
+    padding: 20px;
+    border: 1px solid skyblue;
+}
+
+header{
+    grid-area: header;
+}
+nav{
+    grid-area: nav;
+}
+main{
+    grid-area: content;
+}
+aside{
+    grid-area: sidebar;
+}
+footer{
+    grid-area: footer;
+}
